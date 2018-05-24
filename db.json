@@ -1,11 +1,25 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "hello"
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "posts": <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://T-Mobile/Wholesale/xml">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:sendDeviceChangeNotificationResponse>
+         <ns:header>
+            <ns:partnerID>110</ns:partnerID>
+            <ns:tranDateTime>2018-05-23T02:30:39.419-07:00</ns:tranDateTime>
+         </ns:header>
+         <ns:body>
+            <!--1 or more repetitions:-->
+            <ns:output>
+               <ns:partnerTransactionID>sdasd</ns:partnerTransactionID>
+               <ns:sendDeviceChangeNotification>
+                  <ns:result>
+                     <ns:status>100</ns:status>
+                  </ns:result>
+               </ns:sendDeviceChangeNotification>
+            </ns:output>
+            <ns:outputCount>1</ns:outputCount>
+         </ns:body>
+      </ns:sendDeviceChangeNotificationResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
 }
